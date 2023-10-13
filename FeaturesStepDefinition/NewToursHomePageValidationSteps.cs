@@ -1,6 +1,5 @@
 ﻿using BDD_ExtentReports_NewTours.Drivers;
 using BDD_ExtentReports_NewTours.PageObjects;
-using System;
 using TechTalk.SpecFlow;
 
 namespace BDD_ExtentReports_NewTours.FeaturesStepDefinition

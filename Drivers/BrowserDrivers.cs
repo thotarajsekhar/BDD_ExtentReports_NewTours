@@ -26,7 +26,6 @@ namespace BDD_ExtentReports_NewTours.Drivers
             {
                 string jsonObj = r.ReadToEnd();
                 dynamic array = JsonConvert.DeserializeObject(jsonObj);
-                //List<ConfigData> items = JsonConvert.DeserializeObject<List<ConfigData>>(json);
                 foreach (var item in array)
                 {
                     _browserDriverToUse = item.BrowserName;
