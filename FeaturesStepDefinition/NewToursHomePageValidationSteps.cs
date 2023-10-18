@@ -38,7 +38,20 @@ namespace BDD_ExtentReports_NewTours.FeaturesStepDefinition
         public void ThenICloseTheBrowser()
         {
             _browserDrivers.Dispose();
-            _browserDrivers.ExtentReportFlush();
+        }
+
+        [When(@"I login with ""(.*)"" and ""(.*)""")]
+        public void WhenILoginWithAnd(string username, string password)
+        {
+            _homePageObjects.EnterUserName(username);
+            _homePageObjects.EnterPassword(password);
+            _homePageObjects.ClickOnSubmit();
+        }
+
+        [Then(@"I verify I will be logged in to the System")]
+        public void ThenIVerifyIWillBeLoggedInToTheSystem()
+        {
+            _homePageObjects.VerifySignOffLink();
         }
     }
 }
